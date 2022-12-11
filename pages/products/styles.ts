@@ -12,11 +12,25 @@ export const SContainer = styled.div`
 `
 
 export const SContent = styled.div`
+  width: 100%;
   margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `
 
 export const SPrice = styled.div`
   font-weight: bold;
   font-size: 1.2rem;
   color: #666666;
+`
+
+export const SDescriptionList = styled.ul`
+  list-style: none;
+`
+
+export const SDescriptionItem = styled.li`
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 8px;
 `

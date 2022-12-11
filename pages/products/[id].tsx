@@ -3,8 +3,8 @@ import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import {ISimpleProduct} from "../../models";
 import {productList} from "../../public/mock";
-import {SContainer, SContent, SPrice} from "./styles";
-
+import {SContainer, SContent, SDescriptionItem, SDescriptionList, SPrice} from "./styles";
+import {Button} from "../../components/buttons";
 
 export default function Product () {
     const [product, setProduct] = useState<ISimpleProduct | null>(null);
@@ -37,14 +37,16 @@ export default function Product () {
                         <div>
                             Description:
                             {product.description ? (
-                                <ul>
+                                <SDescriptionList>
                                     {product.description.map((desc) => (
-                                        <li key={desc}>{desc}</li>
+                                        <SDescriptionItem key={desc}>{desc}</SDescriptionItem>
                                     ))}
-                                </ul>
+                                </SDescriptionList>
                             ): ' no description'}
                         </div>
-                        <button>Add to cart</button>
+                        <div>
+                            <Button text='Add to cart' onClick={() => {}} />
+                        </div>
                     </SContent>
                 </SContainer>
             </main>
