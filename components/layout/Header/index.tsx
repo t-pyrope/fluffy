@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { GiFluffySwirl} from "react-icons/gi";
 
 import {SActions, SHeader, SLogo} from "./styles";
+import {useStoreContext} from "../../../store";
+import {Button} from "../../buttons";
+import {LoginModal} from "../../modals";
 
 export const Header = () => {
+    const [loginOpen, setLoginOpen] = useState(false);
+    const { token } = useStoreContext();
+
     return (
         <SHeader>
             <SLogo>
@@ -12,11 +18,19 @@ export const Header = () => {
                 Fluffy
             </SLogo>
             <SActions>
-                Cart
+                <Button text='Cart' onClick={() => {}} />
                 {' '}
-                Profile
+                {token ? (
+                    <Button text='Profile' onClick={() => {}} variant='outlined' />
+                ) : (
+                    <>
+                        <Button text='Login' onClick={() => setLoginOpen(true)} variant='outlined' />
+                        {' '}
+                        <Button text='Register' onClick={() => {}} variant='outlined' />
+                    </>
+                )}
             </SActions>
-
+            {loginOpen && <LoginModal />}
         </SHeader>
     )
 }
