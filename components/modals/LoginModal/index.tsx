@@ -1,11 +1,35 @@
-import React from 'react';
-import {SModal, SModalContainer} from "../styles";
+import React, {useState} from 'react';
+import {SModal, SModalContainer, STitle} from "../styles";
+import {Input} from "../../inputs";
+import {Button} from "../../buttons";
 
-export const LoginModal = () => {
+// TODO: CloseButton
+export const LoginModal = ({ setOpen }: {
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>
+}) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     return (
         <SModalContainer>
             <SModal>
-                LoginModal
+                <form>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                        <STitle>Login</STitle>
+                        <Input
+                            value={email}
+                            label='Email'
+                            onChange={(val) => setEmail(val)}
+                            type='email'
+                        />
+                        <Input
+                            value={password}
+                            onChange={(val) => setPassword(val)}
+                            label='Password'
+                            type='password'
+                        />
+                        <Button text='Login' onClick={() => {}} />
+                    </div>
+                </form>
             </SModal>
         </SModalContainer>
     )

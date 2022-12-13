@@ -30,7 +30,7 @@ export const Header = () => {
                     </>
                 )}
             </SActions>
-            {loginOpen && <LoginModal />}
+            {loginOpen && <LoginModal setOpen={setLoginOpen} />}
         </SHeader>
     )
 }
