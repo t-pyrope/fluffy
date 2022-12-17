@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const SModalContainer = styled.div`
-  position: absolute;
+  //position: absolute;
   width: fit-content;
   height: fit-content;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
   background: #f3f3f3;
   border-radius: 10px;
   padding: 20px;

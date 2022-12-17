@@ -4,9 +4,7 @@ import {Input} from "../../inputs";
 import {Button} from "../../buttons";
 
 // TODO: CloseButton
-export const LoginModal = ({ setOpen }: {
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>
-}) => {
+export const LoginModal = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     return (

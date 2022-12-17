@@ -12,6 +12,19 @@ export default createGlobalStyle`
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     padding: 1rem;
     color: ${({ theme }) => theme.colors.main};
+    min-height: 100vh;
+  }
+  
+  #__next {
+    min-height: calc(100vh - 2rem);
+    
+    & > div {
+      min-height: inherit;
+      
+      & > main {
+        min-height: inherit;
+      }
+    }
   }
 
   a {

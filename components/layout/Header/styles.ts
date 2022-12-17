@@ -7,9 +7,4 @@ export const SHeader = styled.header`
   margin-bottom: 1rem;
 `
 
-export const SLogo = styled.div`
-  font-size: 30px;
-  font-weight: bold;
-`
-
 export const SActions = styled.div``
