@@ -38,7 +38,7 @@ export default function Product () {
 
             <main style={{ display: 'flex', justifyContent: 'center' }}>
                 <SProductContainer>
-                    <Image src={product.url} alt={product.name} />
+                    <Image src={product.url} alt={product.name} width={1000} height={1000} />
                     <SProductContent>
                         <h1>{product.name}</h1>
                         <SPrice>${product.price}</SPrice>

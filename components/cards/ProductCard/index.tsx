@@ -9,7 +9,7 @@ export const ProductCard = ({ product }: {product: ISimpleProduct}) => {
     return (
         <Link href={`/products/${product.id}`}>
             <SContainer title={product.name}>
-                <Image src={product.thumbnail} alt={product.name} />
+                <Image src={product.thumbnail} alt={product.name} width={1000} height={1000} />
             </SContainer>
         </Link>
     )
