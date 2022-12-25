@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
+import Image from "next/image";
+
 import {ISimpleProduct} from "../../models";
 import {productList} from "../../public/mock";
 import {
@@ -36,7 +38,7 @@ export default function Product () {
 
             <main style={{ display: 'flex', justifyContent: 'center' }}>
                 <SProductContainer>
-                    <img src={product.url} alt={product.name} />
+                    <Image src={product.url} alt={product.name} />
                     <SProductContent>
                         <h1>{product.name}</h1>
                         <SPrice>${product.price}</SPrice>

@@ -1,13 +1,15 @@
 import React from 'react';
+import Link from "next/link";
+import Image from "next/image";
+
 import {ISimpleProduct} from "../../../models";
 import {SContainer} from "./styles";
-import Link from "next/link";
 
 export const ProductCard = ({ product }: {product: ISimpleProduct}) => {
     return (
         <Link href={`/products/${product.id}`}>
             <SContainer title={product.name}>
-                <img src={product.thumbnail} alt={product.name} />
+                <Image src={product.thumbnail} alt={product.name} />
             </SContainer>
         </Link>
     )
