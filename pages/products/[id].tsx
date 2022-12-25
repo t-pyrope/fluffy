@@ -3,7 +3,13 @@ import {useRouter} from "next/router";
 import {useEffect, useState} from "react";
 import {ISimpleProduct} from "../../models";
 import {productList} from "../../public/mock";
-import {SContainer, SContent, SDescriptionItem, SDescriptionList, SPrice} from "./styles";
+import {
+    SProductContainer,
+    SProductContent,
+    SDescriptionItem,
+    SDescriptionList,
+    SPrice
+} from "../../styles/pages/products";
 import {Button} from "../../components/buttons";
 
 export default function Product () {
@@ -29,9 +35,9 @@ export default function Product () {
             </Head>
 
             <main style={{ display: 'flex', justifyContent: 'center' }}>
-                <SContainer>
+                <SProductContainer>
                     <img src={product.url} alt={product.name} />
-                    <SContent>
+                    <SProductContent>
                         <h1>{product.name}</h1>
                         <SPrice>${product.price}</SPrice>
                         <div>
@@ -47,8 +53,8 @@ export default function Product () {
                         <div>
                             <Button text='Add to cart' onClick={() => {}} />
                         </div>
-                    </SContent>
-                </SContainer>
+                    </SProductContent>
+                </SProductContainer>
             </main>
         </div>
     )

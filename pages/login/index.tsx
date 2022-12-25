@@ -2,7 +2,7 @@ import React from 'react';
 import Head from "next/head";
 import {LoginModal} from "../../components/modals";
 import {Logo} from "../../components/ui";
-import {SLoginContainer, SLogoContainer} from "./styles";
+import {SLoginContainer, SLogoContainer} from "../../styles/pages/login";
 
 const Login = () => {
     return (

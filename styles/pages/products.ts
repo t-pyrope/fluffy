@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SContainer = styled.div`
+export const SProductContainer = styled.div`
   width: 100%;
   max-width: 900px;
   display: flex;
@@ -11,7 +11,7 @@ export const SContainer = styled.div`
   }
 `
 
-export const SContent = styled.div`
+export const SProductContent = styled.div`
   width: 100%;
   margin: 1rem;
   display: flex;
