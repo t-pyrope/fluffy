@@ -2,12 +2,12 @@ import React from 'react';
 import {useRouter} from "next/router";
 
 import {SActions, SHeader} from "./styles";
-import {useStoreContext} from "../../../store";
 import {Button} from "../../buttons";
 import {Logo} from "../../ui";
+import {useAppSelector} from "../../../store/hooks";
 
 export const Header = () => {
-    const { token } = useStoreContext();
+    const token = useAppSelector(({ user }) => user.token)
     const router = useRouter();
 
     return (

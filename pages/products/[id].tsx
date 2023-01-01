@@ -4,7 +4,6 @@ import {useEffect, useState} from "react";
 import Image from "next/image";
 
 import {ISimpleProduct} from "../../models";
-import {productList} from "../../public/mock";
 import {
     SProductContainer,
     SProductContent,
@@ -13,17 +12,17 @@ import {
     SPrice
 } from "../../styles/pages/products";
 import {Button} from "../../components/buttons";
+import {useAppSelector} from "../../store/hooks";
 
 export default function Product () {
     const [product, setProduct] = useState<ISimpleProduct | null>(null);
+    const products = useAppSelector(({ products }) => products.products);
     const router = useRouter();
     const { id } = router.query;
 
-    console.log("ROUTERR id", id);
-
     useEffect(() => {
         if (!id) return;
-        const newProduct = productList.find((product) => product.id === id);
+        const newProduct = products.find((product) => product.id === id);
         if (newProduct) {
             setProduct(newProduct);
         }
@@ -38,9 +37,9 @@ export default function Product () {
 
             <main style={{ display: 'flex', justifyContent: 'center' }}>
                 <SProductContainer>
-                    <Image src={product.url} alt={product.name} width={1000} height={1000} />
+                    <Image src={product.src} alt={product.title} width={1000} height={1000} />
                     <SProductContent>
-                        <h1>{product.name}</h1>
+                        <h1>{product.title}</h1>
                         <SPrice>${product.price}</SPrice>
                         <div>
                             Description:

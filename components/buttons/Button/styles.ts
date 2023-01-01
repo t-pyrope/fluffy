@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SButton = styled.button<{ variant: 'contained' | 'outlined' }>`
+export const SButton = styled.button<{ variant: 'contained' | 'outlined', size: 'small' | 'medium' }>`
   padding: 8px 12px;
   border-radius: 0;
   color: ${({ variant }) => variant === 'contained' ? '#fff' : '#131313'};

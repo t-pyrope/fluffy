@@ -10,7 +10,7 @@ export const LoginModal = () => {
     return (
         <SModalContainer>
             <SModal>
-                <form>
+                <form style={{ width: '360px' }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                         <STitle>Login</STitle>
                         <Input

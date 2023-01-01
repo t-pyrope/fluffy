@@ -1,8 +1,8 @@
 export interface ISimpleProduct {
-    url: string,
+    src: string,
     thumbnail: string,
-    name: string,
+    title: string,
     price: number,
     id: string,
-    description: string[] | null,
+    description: string[],
 }
